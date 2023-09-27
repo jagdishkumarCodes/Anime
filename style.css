@@ -1,0 +1,481 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+
+    border-radius: 50px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+*::selection {
+    background-color: #fff;
+    color: #95c11e;
+}
+
+.nav {
+    height: 120px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 50px;
+    position: fixed;
+    z-index: 999;
+}
+
+.nav img {
+    height: 75px;
+    border-radius: 50%;
+    /* width: 40px; */
+    margin-left: -130px;
+    margin-right: 150px;
+}
+
+.nav h5 {
+    text-transform: uppercase;
+    font-weight: 1000;
+}
+
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95c11e;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    transition: all linear 0.1s;
+}
+
+#cursor-blur {
+    height: 500px;
+    width: 500px;
+    background-color: rgba(150, 193, 30, 0.3);
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(80px);
+    z-index: 9;
+    transition: all linear 0.4s;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+.main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.35);
+
+}
+
+.page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.page1 h1 {
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+}
+
+.page1 h1::before {
+    content: 'Anime. Ki. Duniya';
+    position: absolute;
+    color: #000;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+}
+
+.page1 h2 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.page1 p {
+    font-size: 10px;
+    width: 70%;
+}
+
+.page2 {
+    height: 152vh;
+    width: 100%;
+    z-index: 10;
+    background-color: #000;
+}
+
+.scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in-1,
+.scroller-in-2 {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller h4 {
+    display: inline-block;
+    font-size: 120px;
+    font-weight: 900px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.4s;
+    -webkit-text-stroke: 2px #ffffff;
+
+
+}
+
+.scroller h4:hover {
+    color: #95c11e;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.AboutUs {
+    margin-top: 130px;
+    margin-bottom: 100px;
+    padding: 0 10px;
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    z-index: 10;
+
+}
+
+.about-us-in h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-bottom: 30px;
+}
+
+.about-us-in p {
+    font-size: 20px;
+    margin: 0 20px;
+    line-height: 40px;
+}
+
+.AboutUs img {
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-us-in {
+    width: 50%;
+    text-align: center;
+}
+
+.cards-container {
+    /* background-color: #000; */
+    /* margin-top: 100px; */
+    /* background:red; */
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    z-index: 10;
+}
+
+.card {
+    height: 80%;
+    width: 24%;
+    /* background-color: blue; */
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.6s;
+}
+
+#card1 {
+    background-image: url(ani.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+#card2 {
+    background-image: url(p.jpg);
+}
+
+#card3 {
+    background-image: url(ol.jpg);
+}
+
+.overley {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 30px;
+    padding-top: 50px;
+    opacity: 0;
+    transition: all ease 0.6s;
+}
+
+.overley h3 {
+
+    color: #000;
+    font-size: 40px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+
+}
+
+.overley p {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 10px;
+    font-size: 30px;
+    color: #000;
+    font-size: 18px;
+}
+
+.card:hover .overley {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg);
+}
+
+.green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    background: linear-gradient(to left bottom, #119f3a, #ace022);
+    z-index: auto;
+}
+
+
+.green-div h4 {
+    width: 50%;
+    font-size: 23px;
+    text-transform: uppercase;
+    line-height: 40px;
+    text-align: center;
+    font-weight: 800;
+    color: #000;
+}
+
+.green-div img {
+    height: 100%;
+    width: 15%;
+    object-fit: cover;
+    
+}
+
+ .page3 {
+    margin-top: 200px;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page3>p {
+    font-size: 30px;
+    font-weight: 800;
+    width: 60%;
+}
+
+.page3 img {
+    position: absolute;
+    height: 60px;
+}
+
+.page3 #colon1 {
+    left: 15%;
+    top: 25%;
+}
+
+.page3 #colon2 {
+    bottom: 30%;
+    right: 15%;
+} 
+.page4{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50vh;
+    width: 100%;
+    position: relative;
+  
+}
+.elem{
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+
+}
+.elem h2{
+    color: #000;
+    height:100%;
+    width: 100%;
+    font-size: 40px;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #95c11e;
+    position: absolute;
+    z-index: 10;
+    transition: all ease 0.5s;
+}
+.elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+
+}
+.elem:hover h2{
+    color: white;
+    background-color: transparent;
+
+}
+.page4 h1{
+    font-size: 80px;
+    position: absolute;
+    top: -8%;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #000;
+    -webkit-text-stroke:1px  #ffffff;
+}
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6.5vw;
+    padding: 0 100px;
+  }
+  #footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    z-index: 0;
+  }
+  #f1 img {
+    height: 100px;
+  }
+  #f1,
+  #f2,
+  #f3,
+  #f4 {
+    width: fit-content;
+    position: relative;
+    z-index: 99;
+    /* background-color: red; */
+  }
+  #f2 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+  
+  #f3 h3 {
+    font-size: 1.6vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+  #f4 h4 {
+    font-size: 1vw;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
